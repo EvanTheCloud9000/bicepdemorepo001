@@ -3,7 +3,7 @@ param location string = 'westus3'
 param namePrefix string = 'itosx'
 param appPlanId string
 
-param dockerImage string = 'ubuntu/nginx'
+param dockerImage string = 'nginxdemos/hello'
 param dockerImageTag string = 'latest'
 
   resource webApplication 'Microsoft.Web/sites@2022-09-01' = {

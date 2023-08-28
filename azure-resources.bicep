@@ -1,9 +1,9 @@
 param location string = 'westus3'
 param storageName string = 'gastoragea3jdvs4lrccuy'
 
-param namePrefix string = 'paulon'
+param namePrefix string = 'evang'
 
-param dockerImage string = 'ubuntu/nginx' //'nginxdemos/hello'
+param dockerImage string = 'nginxdemos/hello'
 param dockerImageTag string = 'latest'
 
 targetScope = 'resourceGroup'

@@ -13,28 +13,25 @@ resource webApplication 'Microsoft.Web/sites@2022-03-01' = {
   properties: {
     serverFarmId: appPlanId
     //httpsOnly: true
-    siteConfig: {
-      appSettings: [
-        {
-          name: 'DOCKER_REGISTRY_SERVICE_URL'
-          value: 'https://index.docker.io'
-        }
-        {
-          name: 'DOCKER_REGISTRY_SERVER_USERNAME'
-          value: ''
-        }
-        {
-          name: 'DOCKER_REGISTRY_SERVER_PASSWORD'
-          value: ''
-        }
-        {
-          name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE'
-          value: 'false'
-        }
-      ]
-      linuxFXVersion: 'DOCKER|${dockerImage}:${dockerImageTag}'
-      // Additional Web App configurations
-    }
+    appSettings: [
+      {
+        name: 'DOCKER_REGISTRY_SERVICE_URL'
+        value: 'https://index.docker.io'
+      }
+      {
+        name: 'DOCKER_REGISTRY_SERVER_USERNAME'
+        value: ''
+      }
+      {
+        name: 'DOCKER_REGISTRY_SERVER_PASSWORD'
+        value: ''
+      }
+      {
+        name: 'WEBSITES_ENABLE_APP_SERVICE_STORAGE'
+        value: 'false'
+      }
+    ]
+    linuxFXVersion: 'DOCKER|${dockerImage}:${dockerImageTag}'
   }
 }
 output siteUrl string = webApplication.properties.hostNames[0]

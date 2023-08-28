@@ -31,7 +31,7 @@ param dockerImageTag string = 'latest'
             value: 'false'
           }
         ]
-        linuxFXVersion: 'DOCKER|${dockerImage}:${dockerImageTag}'
+        linuxFxVersion: 'DOCKER|${dockerImage}:${dockerImageTag}'
       }
     }
   }

@@ -13,6 +13,7 @@ resource webApplication 'Microsoft.Web/sites@2022-09-01' = {
   properties: {
     serverFarmId: appPlanId
     //httpsOnly: true
+    siteConfig: {
     appSettings: [
       {
         name: 'DOCKER_REGISTRY_SERVICE_URL'

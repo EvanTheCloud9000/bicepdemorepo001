@@ -25,7 +25,7 @@ jobs:
       - name: Login with Azure
         uses: azure/login@v1
         with:
-            creds: '${{ C:\Users\lacqu\Documents\Udemy\Bicep\code-ready\Git-Demo-001\secrets.AZURE_CREDENTIALS }}'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
       # Deploys bicep script
       - name: Deploy the Bicep Script

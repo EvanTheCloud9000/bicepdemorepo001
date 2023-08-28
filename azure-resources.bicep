@@ -1,5 +1,5 @@
 param location string = 'westus3'
-param storageName string = 'mynewubuntudrive'
+param storageName string = 'gastoragea3jdvs4lrccuy'
 
 param namePrefix string = 'paulon'
 

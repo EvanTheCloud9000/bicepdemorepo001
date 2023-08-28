@@ -6,8 +6,8 @@ param appPlanId string
 param dockerImage string = 'ubuntu/nginx'
 param dockerImageTag string = 'latest'
 
-resource webApplication 'Microsoft.Web/sites@2022-03-01' = {
-  name: '${namePrefix}-site'
+resource webApplication 'Microsoft.Web/sites@2022-09-01' = {
+  name: '${namePrefix}-website'
   location: location
 
   properties: {
